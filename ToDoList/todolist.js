@@ -14,13 +14,20 @@ function buttonClickEvent() {
     const Xbutton = document.createElement("button");
     const checkbox = document.createElement("input");
     const text = document.createElement("p");
+    const menu_button = document.createElement("button");
+    const menu = document.createElement("img");
     output.appendChild(list);
     list.appendChild(Xbutton);
     list.appendChild(checkbox);
     list.appendChild(text);
+    list.appendChild(menu_button);
+    menu_button.appendChild(menu);
 
     Xbutton.innerText = "X";
 
+    menu_button.className = "menu_button";
+    menu.src = "menu.jpg";
+    menu.className = "menu";
     list.className = "one";
     Xbutton.className = "Xbutton";
     checkbox.type = "checkbox";
@@ -42,9 +49,13 @@ function buttonClickEvent() {
 
     let i = 1;
 
-    text.addEventListener("dblclick", function dbclickEvent() {
+    menu_button.addEventListener("click", function dbclickEvent() {
       if (i === 1) {
         i = 0;
+
+        menu_button.className = "menu_button_C";
+        menu.className = "menu_C";
+
         const modify = document.createElement("input");
         const modify_add = document.createElement("button");
         const modify_div = document.createElement("div");
@@ -68,6 +79,9 @@ function buttonClickEvent() {
             list.removeChild(modify_div);
             list.removeChild(modify_add);
             i = 1;
+
+            menu_button.className = "menu_button";
+            menu.className = "menu";
           } else {
             list.removeChild(modify_div);
             list.removeChild(modify_add);
