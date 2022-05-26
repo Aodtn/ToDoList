@@ -81,9 +81,38 @@ h1 {
   background-color: #fff;
 }
 .modify_button {
+  height: 20px;
+  width: 20px;
   margin-right: 50px;
   margin-left: 2px;
   border-radius: 50%;
   border: 1px solid #000;
   background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu {
+  height: 12px;
+  width: 4px;
+}
+.menu_button {
+  display: flex;
+  align-items: center;
+  border: 0;
+  background-color: transparent;
+  margin-left: auto;
+  margin-right: 50px;
+  filter: opacity(20%);
+}
+.menu_button:hover {
+  filter: opacity(70%);
+}
+.menu_button_C {
+  margin: 0;
+  border: 0;
+  background-color: transparent;
+}
+.menu_C {
+  width: 0px;
 }
